@@ -41,6 +41,15 @@ VALUES
 ('Nicolas', '2001-10-10', 'M', '1.81', '64.5', 'Brasil');
 
 /*
+    This model is the same as the up here.
+    The difference consist in the values is already respect the order from
+    the table. Once you respect the order, you do not need to declare the fields.
+*/
+
+INSERT INTO pessoas VALUES
+(DEFAULT, 'Nicolas', '2001-10-10', 'M', '1.70', '49.0', DEFAULT)
+
+/*
     This command will show all the data in pessoas table
 */
 
