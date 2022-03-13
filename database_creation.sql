@@ -47,7 +47,21 @@ VALUES
 */
 
 INSERT INTO pessoas VALUES
-(DEFAULT, 'Nicolas', '2001-10-10', 'M', '1.70', '49.0', DEFAULT)
+(DEFAULT, 'Nicolas', '2001-10-10', 'M', '1.70', '49.0', DEFAULT);
+
+/*
+    You could use INSERT INTO declaring how many data
+    do you prefer to insert into a table.
+    Looks like this.
+*/
+
+INSERT INTO pessoas VALUES
+(DEFAULT, 'Nicolas', '2001-10-10', 'M', '1.70', '49.0', DEFAULT),
+(DEFAULT, 'Silva', '2001-12-10', 'M', '1.75', '87.0', DEFAULT),
+(DEFAULT, 'Melo', '2001-11-10', 'M', '1.78', '99.0', DEFAULT),
+(DEFAULT, 'Pedro', '2001-10-11', 'M', '1.70', '69.0', DEFAULT),
+(DEFAULT, 'João', '2001-01-10', 'M', '1.70', '79.0', DEFAULT);
+
 
 /*
     This command will show all the data in pessoas table
