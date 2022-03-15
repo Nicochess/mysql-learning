@@ -117,3 +117,29 @@ modify column apelido varchar(15) not null default '';
 
 alter table pessoas
 change column apelido nickname varchar(20) not null default '';
+
+/* 
+    This command will change the table name from pessoas to humanos
+*/
+
+alter table pessoas
+rename to humanos;
+
+/* 
+    This command is a model to create a new table preventing from override an existed
+    table in database
+*/
+
+create table if not exists curso(
+    nome varchar(15) not null unique,
+    descricao text,
+    carga int unsigned,
+    totaulas int,
+    ano year default '2016'
+) default charset = utf8;
+
+/*
+    To delete a table from the database you could use this command
+*/
+
+drop table curso;
