@@ -109,3 +109,11 @@ add column apelido varchar(10) first;
 
 alter table pessoas
 modify column apelido varchar(15) not null default '';
+
+/*
+    This command will change the name of the register from apelido to nickname
+    and keep the not null and default definitions
+*/
+
+alter table pessoas
+change column apelido nickname varchar(20) not null default '';
