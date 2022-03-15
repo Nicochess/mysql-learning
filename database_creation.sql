@@ -68,3 +68,44 @@ INSERT INTO pessoas VALUES
 */
 
 select * from pessoas;
+
+
+/*
+    This command will first show the structure of the pessoas table.
+    Then, will change the pessoas table adding a new column named profissao
+*/
+
+desc pessoas;
+
+alter table pessoas
+add column profissao varchar(10);
+
+/*
+    This command will alter the pessoas table
+    removing the profissao column from it.
+*/
+
+alter table pessoas
+drop column profissao
+
+/*
+    This command will add the profissao column after the nome column
+*/
+
+alter table pessoas
+add column profissao varchar(20) after nome;
+
+/*
+    This command will add the apelido column at first place in pessoas table
+*/
+
+alter table pessoas
+add column apelido varchar(10) first;
+
+/*
+    This command is used to modify apelido column in table
+    passing in to not null and fill the other with blank space
+*/
+
+alter table pessoas
+modify column apelido varchar(15) not null default '';
