@@ -143,3 +143,15 @@ create table if not exists curso(
 */
 
 drop table curso;
+
+/*
+    To update a register in a database, you could use this command
+    First you should use update and the table that you want to change
+    Once you did, use set to identify the field you want to modify and the value
+    Last command, you inform to the database using where how to identify the row you
+    want to change.
+*/
+
+update cursos
+set nome = 'HTML5'
+where idcursos = '1';
