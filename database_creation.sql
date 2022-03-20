@@ -155,3 +155,11 @@ drop table curso;
 update cursos
 set nome = 'HTML5'
 where idcursos = '1';
+
+/*
+    You could you this command to delete from a table cursos
+    and passing a identify in where to specify the data you want to delete
+*/
+
+delete from cursos
+where ano = '2017';
