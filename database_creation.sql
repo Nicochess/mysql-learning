@@ -163,3 +163,9 @@ where idcursos = '1';
 
 delete from cursos
 where ano = '2017';
+
+/*
+    To delete all data from a table without delete itself, use this command
+*/
+
+truncate table cursos;
