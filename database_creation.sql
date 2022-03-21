@@ -183,3 +183,46 @@ order by ano;
 
 select * from cursos
 order by ano desc;
+
+/*
+    With select you could target only some columns in a table
+*/
+
+select nome, carga, curso from cursos;
+
+/*
+    You could select some rows in the table, doing the select all content and filter
+    using where and the field with data like this
+*/
+
+select * from cursos
+where nome = 'Programação';
+
+/*
+    You could filter some rows in a columns in a table, using select
+    especify columns and filter the rows
+*/
+
+select nome, carga from cursos
+where ano = '2018';
+
+/*
+    A cool option as well is filter rows between some values using select
+*/
+
+select nome, carga, id from cursos
+where ano between 2010 and 2019;
+
+/*
+    If you want to filter your rows specify some values in the field
+*/
+
+select nome, carga from cursos
+where ano in (2015, 2016, 2019);
+
+/*
+    You could filter rows using logic operators as well
+*/
+
+select * from cursos
+where ano > 2010 and carga < 20;
