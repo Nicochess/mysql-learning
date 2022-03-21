@@ -169,3 +169,17 @@ where ano = '2017';
 */
 
 truncate table cursos;
+
+/*
+    To select all data from a table and order by some field, use this command
+*/
+
+select * from cursos
+order by ano;
+
+/*
+    To select all data and order by some field descendent, use this command
+*/
+
+select * from cursos
+order by ano desc;
