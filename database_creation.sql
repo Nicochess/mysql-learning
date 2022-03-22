@@ -226,3 +226,19 @@ where ano in (2015, 2016, 2019);
 
 select * from cursos
 where ano > 2010 and carga < 20;
+
+--
+--  One option that you have is filter by first letter using like in select
+--  Here will show just the rows that start with S. % is a special character that substitute any other char.
+--
+
+select * from cursos
+where nome like 's%';
+
+
+--
+-- You could as well, filter by values that are not like a expression
+--
+
+select * from cursos
+where nome not like 'a%';
