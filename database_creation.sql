@@ -242,3 +242,47 @@ where nome like 's%';
 
 select * from cursos
 where nome not like 'a%';
+
+--
+-- To select the unique values filtering by select, use DISTINCT word
+--
+
+select distinct * from cursos
+
+--
+--  Another cool functionality is that you could count the values that was filter
+--  using count in select
+--
+
+select count(nome) from cursos
+where nome like 'a%';
+
+--
+-- To check the biggest value in a table use max
+--
+
+select max(carga) from cursos;
+
+--
+-- To sum all values from a column you could use sum
+--
+
+select sum(carga) from cursos;
+
+--
+-- If you wanna know how many rows have a value in a table
+-- you have to group them
+--
+
+select carga, count(*) from cursos
+group by carga
+order by carga;
+
+--
+--  If you wanna show only values that was count in a condition, use having
+--  having is like where.
+--
+
+select ano, count(*) from cursos
+group by ano
+having count(ano) > 5;
