@@ -286,3 +286,31 @@ order by carga;
 select ano, count(*) from cursos
 group by ano
 having count(ano) > 5;
+
+--
+-- To add a foreign key on your table to create
+-- relation beetween data, you could use this commands
+--
+
+alter table alunos
+add column cursofav int;
+
+alter table alunos
+add foreign key (cursofav)
+references cursos(idcursos);
+
+--
+-- To acess the data from a outside table
+-- you will have to use JOIN with SELECT to get the data
+-- You must connect the keys using ON
+--
+
+select alunos.nome, alunos.email, cursos.nome, cursos.carga
+from alunos join cursos
+on cursos.idcursos = alunos.cursofav;
+
+-- 
+-- To short your command lines you could use the AS in FROM on SELECT
+--
+
+select a.nome, a.email from aluno as a;
