@@ -314,3 +314,17 @@ on cursos.idcursos = alunos.cursofav;
 --
 
 select a.nome, a.email from aluno as a;
+
+--
+-- To create a multi-relational register, you need to create another table
+--
+
+create table aluno_assiste_curso (
+    id int NOT NULL AUTO_INCREMENT,
+    nasc date,
+    idaluno int,
+    idcurso int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (idaluno) REFERENCES alunos(id),
+    FOREIGN KEY (idcurso) REFERENCES cursos(id)
+)   DEFAULT CHARSET = utf8;
